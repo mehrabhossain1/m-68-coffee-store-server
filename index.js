@@ -29,9 +29,9 @@ async function run() {
 
     const coffeeCollection = client.db("coffeeDB").collection("coffee");
 
-    app.get("/coffee", async(req,res)=>{
-      
-    })
+    app.get("/coffee", async (req, res) => {
+      const cursor = coffeeCollection.find();
+    });
 
     app.post("/coffee", async (req, res) => {
       const newCoffee = req.body;
