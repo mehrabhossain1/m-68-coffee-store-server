@@ -31,6 +31,8 @@ async function run() {
 
     app.get("/coffee", async (req, res) => {
       const cursor = coffeeCollection.find();
+      const result = await cursor.toArray();
+      res.send(result);
     });
 
     app.post("/coffee", async (req, res) => {
