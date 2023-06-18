@@ -54,6 +54,8 @@ async function run() {
       const filter = { _id: new ObjectId(id) };
       const options = { upsert: true };
       const updatedCoffee = req.body;
+      console.log("57", updatedCoffee);
+
       const coffee = {
         $set: {
           name: updatedCoffee.name,
